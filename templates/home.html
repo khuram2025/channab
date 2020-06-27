@@ -1,0 +1,184 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from demo.designing-world.com/suha-v1.3.0/home.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 30 Apr 2020 13:28:55 GMT -->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="manifest" href="{% static 'manifest.json' %}">
+    <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags-->
+    <!-- Title-->
+    <title>Channab- Pakistan Largest Animal Marketplace</title>
+    <!-- Favicon-->
+    <link rel="icon" href="img/core-img/favicon.ico">
+    <!-- Stylesheet-->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  </head>
+  <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v7.0&appId=111236879397271&autoLogAppEvents=1" nonce="wCmw4Rfl"></script>
+  <body>
+    <!-- Preloader-->
+    <div class="preloader" id="preloader">
+      <div class="spinner-grow text-secondary" role="status">
+        <div class="sr-only">Loading...</div>
+      </div>
+    </div>
+    <!-- Header Area-->
+    <div class="header-area" id="headerArea">
+      <div class="container h-100 d-flex align-items-center justify-content-between">
+        <!-- Logo Wrapper-->
+        <div class="logo-wrapper"><a href="home.html"><img src="img/core-img/logo-small.png" alt=""></a></div>
+        <!-- Search Form-->
+        <div class="top-search-form">
+          <form action="#" method="POST">
+            <input class="form-control" type="search" placeholder="Enter your keyword">
+            <button type="submit"><i class="fa fa-search"></i></button>
+          </form>
+        </div>
+        <!-- Navbar Toggler-->
+        <div class="suha-navbar-toggler d-flex justify-content-between flex-wrap" id="suhaNavbarToggler"><span></span><span></span><span></span></div>
+      </div>
+    </div>
+    <!-- Sidenav Black Overlay-->
+    <div class="sidenav-black-overlay"></div>
+    <!-- Side Nav Wrapper-->
+    <div class="suha-sidenav-wrapper" id="sidenavWrapper">
+      <!-- Sidenav Profile-->
+      <div class="sidenav-profile">
+        <div class="user-profile"><img src="img/bg-img/9.jpg" alt=""></div>
+        <div class="user-info">
+          <h6 class="user-name mb-0">Channab</h6>
+          <p class="available-balance">Balance <span>$<span class="counter">0</span></span></p>
+        </div>
+      </div>
+      <!-- Sidenav Nav-->
+      <ul class="sidenav-nav">
+        <li><a href="#"><i class="lni-user"></i>My Profile</a></li>
+        <li><a href="#"><i class="lni-alarm lni-tada-effect"></i>Notifications<span class="ml-3 badge badge-warning">3</span></a></li>
+        <li><a href="#"><i class="lni-empty-file"></i>All Pages</a></li>
+        <li><a href="#"><i class="lni-heart-filled"></i>My Wishlist</a></li>
+        <li><a href="#"><i class="lni-cog"></i>Settings</a></li>
+        <li><a href="#"><i class="lni-power-switch"></i>Sign Out</a></li>
+      </ul>
+      <!-- Go Back Button-->
+      <div class="go-home-btn" id="goHomeBtn"><i class="lni-arrow-left"></i></div>
+    </div>
+    <div class="page-content-wrapper">
+      <!-- Hero Slides-->
+      <div class="hero-slides owl-carousel">
+        <!-- Single Hero Slide-->
+        <div class="single-hero-slide">
+          <div class="slide-img"><img src="img/bg-img/1.jpg" alt=""></div>
+          <div class="slide-content h-100 d-flex align-items-center">
+            <div class="container">
+              <h4 class="text-white mb-0" data-animation="fadeInUp" data-delay="100ms" data-wow-duration="1000ms">Amazon Echo</h4>
+              <p class="text-white" data-animation="fadeInUp" data-delay="400ms" data-wow-duration="1000ms">3rd Generation, Charcoal</p><a class="btn btn-primary btn-sm" href="#" data-animation="fadeInUp" data-delay="800ms" data-wow-duration="1000ms">Buy Now</a>
+            </div>
+          </div>
+        </div>
+        <!-- Single Hero Slide-->
+        <div class="single-hero-slide">
+          <div class="slide-img"><img src="img/bg-img/2.jpg" alt=""></div>
+          <div class="slide-content h-100 d-flex align-items-center">
+            <div class="container">
+              <h4 class="text-white mb-0" data-animation="fadeInUp" data-delay="100ms" data-wow-duration="1000ms">Light Candle</h4>
+              <p class="text-white" data-animation="fadeInUp" data-delay="400ms" data-wow-duration="1000ms">Now only $22</p><a class="btn btn-success btn-sm" href="#" data-animation="fadeInUp" data-delay="500ms" data-wow-duration="1000ms">Buy Now</a>
+            </div>
+          </div>
+        </div>
+        <!-- Single Hero Slide-->
+        <div class="single-hero-slide">
+          <div class="slide-img"><img src="img/bg-img/3.jpg" alt=""></div>
+          <div class="slide-content h-100 d-flex align-items-center">
+            <div class="container">
+              <h4 class="mb-0 text-dark" data-animation="fadeInUp" data-delay="100ms" data-wow-duration="1000ms">Best Furniture</h4>
+              <p data-animation="fadeInUp" data-delay="400ms" data-wow-duration="1000ms">3 years warranty</p><a class="btn btn-danger btn-sm" href="#" data-animation="fadeInUp" data-delay="800ms" data-wow-duration="1000ms">Buy Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Product Catagories-->
+      <div class="product-catagories-wrapper pt-3">
+        <div class="container">
+          <div class="section-heading">
+            <h6 class="ml-1">Animal Category</h6>
+          </div>
+          <div class="product-catagory-wrap">
+            <div class="row">
+              {%for cat in category_list %}
+              <div class="col-4">
+                <div class="card mb-3 catagory-card">
+                  <div class="card-body"><a href="{{cat.get_absolute_url}}"><i class="lni-apartment"></i><span>{{cat.category_name}}</span></a></div>
+                </div>
+              </div>
+              {%endfor%}
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Flash Sale Slide-->
+      <!-- Top Products-->
+
+      <!-- Cool Facts Area-->
+
+      <!-- Weekly Best Sellers-->
+      <div class="weekly-best-seller-area pt-3">
+        <div class="container">
+          <div class="section-heading d-flex align-items-center justify-content-between">
+            <h6 class="pl-1">Top Animal</h6><a class="btn btn-success btn-sm" href="{%url 'product_list' %}">View All</a>
+          </div>
+          {%for product in product_list%}
+          <div class="row">
+            <!-- Single Weekly Product Card-->
+            <div class="col-12">
+              <div class="card weekly-product-card mb-3">
+                <div class="card-body d-flex align-items-center">
+                  <div class="product-thumbnail-side"><span class="badge badge-success">{{product.category}}</span><a class="wishlist-btn" href="#"><i class="lni-heart-filled"></i></a><a class="product-thumbnail d-block" href="{% url 'product_detail' product.id %}"><img src="{{product.image.url}}" alt=""></a></div>
+                  <div class="product-description"><a class="product-title d-block" href="{% url 'product_detail' product.id %}">{{product.name}}</a>
+                    <p class="sale-price"><i>Rs.</i>{{product.price}}<span></span></p>
+                    <div class="product-rating"><i class="lni-star-filled"></i>Mobile Number{{product.mobilenumber}}</div><a class="btn btn-success btn-sm add2cart-notify" href="#"><i class="mr-1 lni-cart"></i>Buy</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Single Weekly Product Card-->
+
+          </div>
+          {%endfor%}
+        </div>
+      </div>
+    </div>
+    <!-- Footer Nav-->
+    <div class="footer-nav-area" id="footerNav">
+      <div class="suha-footer-nav h-100">
+        <ul class="h-100 d-flex align-items-center justify-content-between">
+          <li><a href="{%url 'home' %}"><i class="lni-support"></i>Support</a></li>
+          <li><a href="{%url 'product_list' %}"><i class="lni-heart"></i>My Selection</a></li>
+          <li class="active"><a href="{%url 'home' %}"><i class="lni-home"></i>Home</a></li>
+          <li><a href="{%url 'product_list' %}"><i class="lni-heart"></i>Animal List</a></li>
+          <li><a href="{%url 'home' %}"><i class="lni-cog"></i>Settings</a></li>
+        </ul>
+      </div>
+    </div>
+    <!-- All JavaScript Files-->
+    <script src={% static 'js/jquery.min.js' %}></script>
+    <script src={% static 'js/popper.min.js' %}></script>
+    <script src={% static 'js/bootstrap.min.js' %}></script>
+    <script src={% static 'js/waypoints.min.js' %}></script>
+    <script src={% static 'js/jquery.easing.min.js' %}></script>
+    <script src={% static 'js/owl.carousel.min.js' %}></script>
+    <script src={% static 'js/jquery.animatedheadline.min.js' %}></script>
+    <script src={% static 'js/jquery.counterup.min.js' %}></script>
+    <script src={% static 'js/wow.min.js' %}></script>
+    <script src={% static 'js/jarallax.min.js' %}></script>
+    <script src={% static 'js/jarallax-video.min.js' %}></script>
+    <script src={% static 'js/default/jquery.passwordstrength.js' %}></script>
+    <script src={% static 'js/default/dark-mode-switch.js' %}></script>
+    <script src={% static 'js/default/active.js' %}></script>
+  </body>
+
+<!-- Mirrored from demo.designing-world.com/suha-v1.3.0/home.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 30 Apr 2020 13:30:07 GMT -->
+</html>

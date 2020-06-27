@@ -1,0 +1,113 @@
+{%extends 'BPDetail.html' %}
+{%load static %}
+{%block content %}
+<div class="page-content-wrapper">
+      <!-- Product Slides-->
+      <div class="product-slides owl-carousel">
+        <!-- Single Hero Slide-->
+
+        <div class="single-product-slide"><img src="{{product_detail.image.url}} " alt=""></div>
+
+
+      </div>
+      <div class="product-description pb-3">
+        <!-- Product Title & Meta Data-->
+        <div class="product-title-meta-data bg-white mb-3 py-3">
+          <div class="container d-flex justify-content-between">
+            <div class="p-title-price">
+              <h6 class="mb-1">{{product_detail.name}}</h6>
+              <p class="sale-price mb-0">{{product_detail.price}}<span>$0</span></p>
+            </div>
+            
+          </div>
+          <!-- Ratings-->
+          <div class="product-ratings">
+            <div class="container d-flex align-items-center justify-content-between">
+              <div class="ratings"><i class="lni-star-filled"></i><i class="lni-star-filled"></i><i class="lni-star-filled"></i><i class="lni-star-filled"></i><i class="lni-star-filled"></i></div>
+              <div class="total-result-of-ratings"><span>4.96</span><span>Very Good</span></div>
+            </div>
+          </div>
+        </div>
+        <!-- Selection Panel-->
+        <!-- Add To Cart-->
+        <div class="cart-form-wrapper bg-white mb-3 py-3">
+          <div class="container">
+              {% if product_detail.city %}
+              <button class="btn btn-warning" type="submit">City: {{product_detail.city}}</button>
+              {%endif%}
+              <button class="btn btn-success" type="submit">Mobile Number: {{product_detail.mobilenumber}}</button>
+          </div>
+        </div>
+        <!-- Product Specification-->
+        <div class="p-specification bg-white mb-3 py-3">
+          <div class="container">
+            <h6>Specifications</h6>
+            <p>{{product_detail.description}}</p>
+            <ul>
+              <li>100% good reviews</li>
+              <li>7 days returns</li>
+              <li>Warranty not aplicable</li>
+            </ul>
+          </div>
+        </div>
+        <!-- Rating & Review Wrapper-->
+        <div class="rating-and-review-wrapper bg-white py-3 mb-3">
+          <div class="container">
+            <h6>Ratings &amp; Reviews</h6>
+            <div class="rating-review-content">
+              <ul>
+                <li class="single-user-review d-flex">
+                  <div class="user-thumbnail"><img src="{ % static 'img/bg-img/7.jpg' %}" alt=""></div>
+                  <div class="rating-comment">
+                    <div class="rating"><i class="lni-star-filled"></i><i class="lni-star-filled"></i><i class="lni-star-filled"></i><i class="lni-star-filled"></i><i class="lni-star-filled"></i></div>
+                    <p class="comment mb-0">Very good animal. It's just amazing!</p><span class="name-date">Channab 12 Jun 2020</span>
+                  </div>
+                </li>
+                <li class="single-user-review d-flex">
+                  <div class="user-thumbnail"><img src="{% static 'img/bg-img/8.jpg' %}" alt=""></div>
+                  <div class="rating-comment">
+                    <div class="rating"><i class="lni-star-filled"></i><i class="lni-star-filled"></i><i class="lni-star-filled"></i><i class="lni-star-filled"></i><i class="lni-star-filled"></i></div>
+                    <p class="comment mb-0">WOW excellent animal. Love it.</p><span class="name-date">Channab 10 Jun  2020</span>
+                  </div>
+                </li>
+                <li class="single-user-review d-flex">
+                  <div class="user-thumbnail"><img src="{% static 'img/bg-img/9.jpg' %}" alt=""></div>
+                  <div class="rating-comment">
+                    <div class="rating"><i class="lni-star-filled"></i><i class="lni-star-filled"></i><i class="lni-star-filled"></i><i class="lni-star-filled"></i><i class="lni-star-filled"></i></div>
+                    <p class="comment mb-0">What a nice animal it is. I am looking it's.</p><span class="name-date">Channab 9 Jun  2020</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- Ratings Submit Form-->
+        <div class="ratings-submit-form bg-white py-3">
+          <div class="container">
+            <h6>Submit A Review</h6>
+
+            <form action="#" method="POST">
+              <div class="form-group">
+                <div class="stars">
+                  <input class="star-1" type="radio" name="star" id="star1">
+                  <label class="star-1" for="star1"></label>
+                  <input class="star-2" type="radio" name="star" id="star2">
+                  <label class="star-2" for="star2"></label>
+                  <input class="star-3" type="radio" name="star" id="star3">
+                  <label class="star-3" for="star3"></label>
+                  <input class="star-4" type="radio" name="star" id="star4">
+                  <label class="star-4" for="star4"></label>
+                  <input class="star-5" type="radio" name="star" id="star5">
+                  <label class="star-5" for="star5"></label><span></span>
+                </div>
+              </div>
+              <div class="form-group">
+                <textarea class="form-control" id="comments" name="comment" cols="30" rows="10" data-max-length="200"></textarea>
+              </div>
+              <button class="btn btn-sm btn-primary" type="submit">Save Review</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+{%endblock%}

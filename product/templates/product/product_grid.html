@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{%load static%}
+{% block content %}
+
+<div class="row">
+  <!-- Single Weekly Product Card-->
+
+{%for product in product_list%}
+  <div class="col-6 col-sm-4">
+              <div class="card top-product-card mb-3">
+                <div class="card-body"><span class="badge badge-success">Sale</span><a class="wishlist-btn" href="#"><i class="lni-heart-filled"></i></a><a class="product-thumbnail d-block" href="{% url 'product_detail' product.slug %}"><img class="mb-2" src="{{product.image.url}}" alt=""></a><a class="product-title d-block" href="{% url 'product_detail' product.slug %}">{{product.name}}</a>
+                  <p class="sale-price">{{product.price}}</p>
+                  <div class="product-rating"><i class="lni-star-filled"></i><i class="lni-star-filled"></i><i class="lni-star-filled"></i><i class="lni-star-filled"></i><i class="lni-star-filled"></i></div><a class="btn btn-success btn-sm add2cart-notify" href="#"><i class="lni-plus"></i></a>
+                </div>
+              </div>
+            </div>
+{%endfor%}
+{%endblock%}
