@@ -3,8 +3,8 @@ from .models import Product, ProductImage, Category
 from django.core.files.storage import FileSystemStorage
 # Create your views here.
 
-def home(request, category_slug=None):
 
+def home(request, category_slug=None):
     category = None
     productlist = Product.objects.all()
     categorylist = Category.objects.all()
@@ -19,10 +19,9 @@ def home(request, category_slug=None):
 
     return render(request, template, context)
 
+
 def productlist(request, category_slug=None):
-
     category = None
-
 
     productlist = Product.objects.all()
 
@@ -35,11 +34,10 @@ def productlist(request, category_slug=None):
 
     return render(request, template, context)
 
+
 def productgrid(request, category_slug=None):
 
     category = None
-
-
     productlist = Product.objects.all()
 
     if category_slug:
@@ -51,6 +49,7 @@ def productgrid(request, category_slug=None):
 
     return render(request, template, context)
 
+
 def productdetail(request, id):
     productdetail = Product.objects.get(id = id)
     productimages = ProductImage.objects.filter(product=productdetail)
@@ -58,6 +57,7 @@ def productdetail(request, id):
     template = 'product/product_detail.html'
 
     return render(request, template, context)
+
 
 def uploadanimal(request):
     if request.method == 'POST'and request.FILES['myfile']:
