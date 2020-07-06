@@ -22,6 +22,7 @@ def home(request, category_slug=None):
 
 def productlist(request, category_slug=None):
     category = None
+
     productlist = Product.objects.all()
 
     if category_slug:
